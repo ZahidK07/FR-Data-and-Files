@@ -1,0 +1,38 @@
+
+
+What is the Difference between HTML and HTML 5 ?
+What is Box Model ?
+What is the Difference between Id and class? and which has more priority ?
+What is the Difference between let, var and const ?
+Do you know about Media Queries in CSS ?
+What is the Difference between margin and padding ?
+What is callback function ?  and when can be use it
+Do you know about promises in JS ?
+Do you know about the Event Loop ?
+Do you know about CSS pre processor ?
+Can browser directly understand Saas or Less ? 
+What is AJAX ?
+Can you explain some Git Commands ? 
+What is the Difference between null and undefined ? 
+Tell New features in ES6 ? 
+Difference between Arrow function and Normal function ? Will Arrow function get hoisted ? 
+What is closure ?
+What is this keyword in JS ?
+Do you know about FlexBox
+
+
+React Questions
+
+What is React JS ? any feature of it ? 
+What is JSX ? can the Browser directly understand JSX ?
+Do you know about Webpack ? 
+What is the life cycle method in ReactJS ? Can we achieve this lifecycle method in functional based components and in which Hook it can be done ?
+What is Ref in React ? 
+DO you have any idea of Control component and uncontrolled component ?
+What is higher order functions in JS ?
+Can you explain about Map filter and reduce ?
+What is difference between state and props in React JS ? 
+What is Router in React ? 
+Do you have any idea of server side Rendering ?
+Do you have any idea of how to optimize the performance of Web App ?
+What id the Difference between Virtual DOM and Real DOM?

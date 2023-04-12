@@ -1,0 +1,30 @@
+Java Imp Topic
+
+conditional statement,loops, collection-framework Imp for DS
+
+variable,datatype
+
+functions
+
+classes and object
+
+after 3,4 months participate in competition on leet code
+
+
+also prepare the notes
+
+solve problem in this order{
+easy:med:hard
+after every 2 months increaese level easy,esy-med,med,med-hard,hard
+
+also try solve the problem by pattern 
+        
+}
+
+
+
+
+download xamp in C drive
+and save and the Github project in ht doc clone 
+open xamp and run apache server
+and local host in browser with port 
