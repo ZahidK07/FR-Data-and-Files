@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        .flex-test{
+             display: flex;
+             flex-flow: row wrap;
+             
+        }
+
+        .flx-bx{
+            width: 250px;
+            height: 200px;
+            background-color: black;
+            border: solid 1px red;
+            margin: 14px;
+            border-radius: 5px;
+        }
+
+        .grid-test{
+            width: 100%;
+            border: solid 1px rgb(200, 77, 0);
+            display: grid;
+            /* grid-template-rows: 200px 200px; */
+            grid-template-rows: repeat(2, 200px);
+            /* grid-template-columns: 200px  200px 200px; */
+            grid-template-columns: repeat(3, 250px);
+            grid-row-gap: 15px;
+            grid-column-gap: 15px;
+            /* grid-gap: 15px; */ 
+        }
+
+        .grid1{background-color: red;}
+
+        .grid2{background-color: yellow;}
+
+        .grid3{background-color: black;}
+
+        .grid4{background-color: violet;}
+
+        .grid5{background-color: green;}
+
+        .grid6{background-color: blue;}
+
+        @media (max-width: 800px){
+            .flex-test{
+           
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="flex-test">
+            <div class="flx-bx">Box 1</div>
+            <div class="flx-bx">Box 2</div>
+            <div class="flx-bx">Box 3</div>
+        </div>
+        <div class="flex-test">
+            <div class="flx-bx">Box 4</div>
+            <div class="flx-bx">Box 5</div>
+            <div class="flx-bx">Box 6</div>
+        </div>
+    </div>
+
+    <div class="grid-test">
+        <div class="grid1"></div>
+        <div class="grid2"></div>
+        <div class="grid3"></div>
+        <div class="grid4"></div>
+        <div class="grid5"></div>
+        <div class="grid6"></div>
+    </div>
+</body>
+</html>

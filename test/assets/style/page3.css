@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(../font/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url(../font/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: Poppinsd;
+    src: url(../font/Poppins-SemiBold);
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(../font/Poppins-Bold.ttf);
+}
+
+:root{
+    /* colors  */
+    --base : #0B0E13;
+    --primary-color: #27DEBF;
+    --secondry-color: #71FCE5;
+    --main-color: #055E4E;
+    --gradient-primary: 45deg, #27DEBE, #055E4E;
+    --color-primary-04: rgb(39, 222, 191, 4%);
+    --color-white-80: rgb(255,255,255, 80%);
+    --color-black: #000000;
+
+
+    /* fonts  */
+    --font-poppins-regular: Poppins-Regular;
+    --font-poppins-medium: Poppins-Medium;
+    --font-poppins-bold: Poppins-Bold;
+    --font-poppins-semibold: Poppin-semibold;
+
+
+    /* font size  */
+    --font-54: 54px;
+    --font-32: 32px;
+    --font-24: 24px;
+    --font-16: 16px;
+    --font-14: 14px;
+
+
+    /* line height  */
+    --line-60 : 60px;
+    --line-38 : 38px;
+    --line-30 : 30px;
+    --line-22 : 22px;
+    --line-20 : 20px;           
+}
+
+body{
+    background: var(--base);
+    /* overflow: hidden; */
+}
+
+
+.header-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-bottom: 1px solid #6e6e6e;
+}
+
+.side-menu{
+    display: none;
+}
+
+.hdr-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    padding-top: 15px;
+    background: none;
+}
+
+.hdr-left a img{
+    height: 40px;
+    width: auto;
+    padding-right: 40px ;
+}
+
+.header-links ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-links ul li{
+    padding: 0 12px;
+    list-style: none;
+    font-family: var(--font-poppins-regular);  
+    background: none;
+}
+
+.header-links ul li a{
+    text-decoration: none;
+    color: var(--color-white-80); 
+}
+
+.bg-right{
+    background-image: url(../Images/BG/effect-bg.svg) !important;
+    background-position: 140% -320px !important;
+    background-repeat: no-repeat !important;
+    overflow-x: hidden !important;
+    background-size: 14vw !important;
+}
+
+.cta-button button{
+    font-family: var(--font-poppins-medium);
+    height: 40px;
+    width: 110px;
+    background-color: var(--primary-color);
+    border: none;
+    font-size: large;
+    border-radius: 5px;   
+}
+
+.home-hero{
+    width: 100%;
+    height: 100vh;
+}
+
+.analog-hero{
+    /* background-color: rgb(105, 104, 104); */
+    width: 100%;
+    height: 100vh;
+}
+
+.analog-bg{
+    position: absolute;
+    /* border: solid 1px red; */
+    top: 335px;
+    width: 270px;
+    height: 230px;
+    background-color: var(--gradient-primary);
+}
+
+.analog-box{
+    display: block;
+    position: absolute;
+    bottom: 25%;
+    left: 80px;
+
+}
+
+.analog-box h1{
+    font-family: var(--font-poppins-bold);
+    font-size: var(--font-54);
+    color: var(--primary-color);
+}
+
+.analog-box p{ 
+    font-family: var(--font-poppins-regular);
+    color: var(--color-white-80); 
+    width: 360px;   
+}
+
+.analog-button{
+    display: inline-block;
+    text-align: center;
+    margin-top: 16px;
+    padding: 10px 60px;
+    font-family: var(--font-poppins-medium);
+    color: var(--color-black);
+    border: none;
+    border-radius: 8px;
+    background: var(--secondry-color);
+    float: left;
+}
+
+.page-effect{
+    width: 90%;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: -150px;
+    margin-left: 130px;
+    background: var(--gradient-primary);
+}
+
+.page-effect-bg{
+    position: absolute;
+    height: 250px;
+}
+
+.card-container{
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    right: 100px;
+    top: 230px;
+    display: grid;
+    grid-template-rows: repeat( 2, 160px);
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 14px;
+}
+
+.card{
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.card img{
+    width: 100%;
+}
+
+#last-card{
+    position: relative;
+    left: 430px;
+}
+
+.footer-container{
+    width: 100%;
+    background: var(--color-primary-04);
+    text-align: center;
+    color: var(--color-white-80);
+    font-family: var(--font-poppins-regular); 
+    padding: 14px 0;
+    margin-top: 250px;
+}
