@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced DOM Manipulation</title>
+</head>
+<body>
+    <center>
+        <h1>
+            <u>
+                Advanced DOM Manipulation
+            </u>
+        </h1>
+    </center>
+    <hr/>
+    <br/>
+
+    <h2>
+        <ol>
+            <li> Create Element helps to Create a new Element with .createElement('') method.</li>
+            <br/>
+            <li> .appendChild() method called the child element variable in Parent Element varibale to show the 
+                child element in the last of the Parent .
+            </li>
+            <br/>
+            <li> .insertAdjacentElement('', ) have to arguments one is position and other is variable on Element declared.
+                This Element have for position according to its syntax insertAdjacentElement(position, element).
+                <br/><br/>
+                <ul>
+                    <li>insertAdjacentElement(beforeBegin, element)</li>
+                    <li>insertAdjacentElement(afterBegin, element)</li>
+                    <li>insertAdjacentElement(beforeEnd, element)</li>
+                    <li>insertAdjacentElement(afterEnd, element)</li>
+                </ul>
+            </li>
+            <br/>
+        </ol>
+    </h2>
+    <hr/>
+    <br/>
+
+    <div id="myDiv">
+        <!-- <h2>We are Learning Advanced DOM</h2>
+        <p>DOM helps to Create Dynamic Websites / Apps</p> -->
+    </div>
+
+    <script>
+
+        let newEl = document.createElement('h2');
+        newEl.innerHTML = 'We are Learning Advanced DOM';
+        /* We created an Element in newEl variable with .createElement('') and given a string with innerHTML*/
+
+        let Parent = document.getElementById('myDiv');
+        myDiv.appendChild(newEl);
+        /* In Parent Element we appended that child which created as h2 with new string in it.*/
+
+        let myPara = document.createElement('p');
+        myPara.innerHTML = 'DOM helps to Create Dynamic Websites / Apps'; /*<< show this text in p tag*/
+
+        let newParent = document.getElementById('myDiv');
+        myDiv.appendChild(myPara);/*<< called child Element var ('p') in Parent var ('div') with .appendChild()
+         to show the p tag in div tag.
+        */
+
+        let newHeading = document.createElement('h3');
+        newHeading.innerHTML = 'New Heading h3 added';
+
+        let newHead = document.getElementById('myDiv');
+        newHead.insertAdjacentElement('beforebegin',newHeading);
+        /* insertAdjacentElement method helps to add a new Element before or after an Element */
+
+        let pTag = document.createElement('p');
+        pTag.innerHTML = 'I am a P tag!';
+
+        let mainParent = document.getElementById('myDiv');
+        mainParent.insertAdjacentElement('afterBegin',pTag);
+       
+        
+    </script>
+</body>
+</html>

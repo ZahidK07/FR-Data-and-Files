@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Coding challenge #1: Print numbers from 1 to 10
+
+        for(let i = 1; i <= 10; i++)
+            {
+                console.log(i);
+            }
+    
+    // >>>>>>>>>>>>>>> Iteratating over Random Arrays <<<<<<<<<<<<<<<<<
+    
+        let a = [1,2,3,4,10,20,40];
+        for( i=0; i<a; i++){
+            console.log(i)
+        }
+
+        let checkArr=()=>{
+            a = ['bat','ball','stump','pads'];
+            for(i=0; i<a.length; i++){
+                console.log(`${a[i]} << for loop`)
+            }
+            a.map((data)=>console.log(`${data} << map method`))
+        }
+        checkArr();
+        console.log(typeof(checkArr))
+
+        let arr2=()=>{
+            b = ['Earth','Moon','Solar'];
+            for(i=0; i<b.length; i++){
+                console.log(b); //<< this show the Array
+                console.log(`${b[i]} << looping`)
+            }
+        }
+        arr2();
+    
+    // >>>>>>>>>>>>>>>> nested functions to call Arrays <<<<<<<<<<<<<<< 
+    
+        let arr3=()=>{
+            console.clear()
+            console.log(typeof(arr3))
+            arr2()
+            console.log(typeof(checkArr))
+            let nestedArr1=()=>{
+                checkArr()
+            }
+            nestedArr1()
+        }
+        arr3()
+    
+        let func4=()=>{
+            console.clear()
+            product ={
+                name:'Parle G',
+                Price:'Rs 10',
+                Country:'India',
+            }
+            console.log(product) 
+            console.log(product.name,'\n',product.Price,'\n',product.Country)            
+        }
+        func4() 
+    // >>>>>>>>>>>>>>>> nested functions to call Arrays <<<<<<<<<<<<<<< 
+
+    // >>>>>>>>>>>>>>>> Nested if else <<<<<<<<<<<<<<< 
+        // let enterName = 'zahid';
+        // if(enterName == prompt()){
+        //     console.log('first name');
+        // }
+        // else if(enterName == 'kazi'){
+        //     console.log('last name');
+        // }else(console.log('enter correctly'));
+        // console.clear()
+        
+
+        // let InfoCheck=()=>{
+        //     Info={
+        //         userName:'Zahid Kazi',
+        //         email:'zkazi@gmail.com',
+        //         userId:'zkazi',
+        //         mobile:'9912345678',
+        //         pwrd:123123
+        //     };
+
+        //     if(Info.userId != prompt(` Enter User ID`), 
+        //        Info.pwrd == prompt(` Enter Password`)){
+        //         // console.log('Enter Password')
+        //         // prompt('') == pwrd;
+        //         document.write('<h1>Welcome <u><em>Zahid Kazi</em></u> - User ID</h1>');
+        //     }else if(Info.email == prompt(`check with email ID`),
+        //             Info.pwrd ==  prompt(`Enter Password`)){
+        //             document.write('<h1>Welcome <u><em>Zahid Kazi</em></u> - email ID</h1>');   
+        //     }
+        //     else(console.log('maximum 3 tries else the Ac will block for 12hrs'))
+        // }
+        // InfoCheck()
+    // >>>>>>>>>>>>>>>> Nested if else <<<<<<<<<<<<<<<
+
+    // >>>>>>>>>>>>>>>> nested if Else to check speed <<<<<<<<<<<<<<< 
+    
+    let speed ={
+        gear1:1,
+        gear2:2,
+        gear3:3,
+        gear4:4,
+        gear5:5
+    }
+
+    let checkSpeed=(carSpeed)=>{
+        if(speed.gear1 == carSpeed){
+            document.write('<h2>Your speed is 20 and its low</h2>');
+        }
+        else if(speed.gear2 == carSpeed){
+            document.write('<h2>Your speed is 40 and its normal</h2>');
+        }
+        else if(speed.gear3 == carSpeed){
+            document.write('<h2>Your speed is 60 and more than normal</h2>');
+        }
+        else if(speed.gear4 == carSpeed){
+            document.write('<h2>Your speed is 85 and its high</h2>');
+        }
+        else if(speed.gear5 == carSpeed){
+            document.write('<h2>Your at Top speed and of 120 and its very high! pls slow down</h2>');
+        }else(document.write('<h2>unable to Change Gear </h2>'))   
+    }
+    // checkSpeed(prompt('Check Speed'))
+    console.clear()
+    console.log('done with speed check if else Code above') 
+    // >>>>>>>>>>>>>>>> nested if Else to check speed <<<<<<<<<<<<<<<
+
+    // >>>>>>>>>>>>>>>> Nested if Else with string Method <<<<<<<<<<<<<<<<<
+
+    
+    
+    </script>
+</body>
+</html>

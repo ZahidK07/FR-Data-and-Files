@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES Classes</title>
+</head>
+<body>
+    <h1>ES6 Classes</h1>
+    <hr/>
+
+    <h2>
+        <ol>
+            <li>
+                class and its syntax class introduced in JS ES6, its a special function and before that its used only objects in fucntion concept for OOPs till JS ES5.
+                <br/><br/>
+                <ul>
+                    <li>It used as a Template to reuse the code and these can be easy to readable.</li>
+                    <li>Classes and its Templates can be mostly used in Games and Forms filling type work.</li>
+                </ul>
+            </li>
+            <br/>
+
+            <li>
+                We can directly write the property without using let, const or var in classes
+            </li>
+            <br/>
+
+            <li>
+                this. keyword help to call the property within the class
+            </li>
+            <br/>
+
+            <li>
+                we create constructor(_,_) and can parse parameters to get it from the new Arguments 
+            </li>
+            <br/>
+
+            <li>
+                we a created a Flight class to schedule Timings of Flights a in day from afternoon to Night
+                check below SS.
+                <br/><br/>
+                    <img src="./ES6-flightClass.PNG">
+                <br/><br/>
+                Flight timings printed with the same flight class by using the new Varibales and arguments and set a new Time for the Flights. 
+                <br/><br/>
+                Check below Timings Printed.
+                <br/><br/>
+                    <img src="./FightTimePrinted.PNG" alt="">
+            </li>
+        </ol>
+    </h2>
+
+    <script>
+        // ======================= example 1 ========================
+        
+            class City{/*<< class name is City*/
+
+                area = 'Bandra West' /*<<property directly defined*/
+
+                constructor()/*<< constructor gets call automatically when we 
+                    create it and log some value within*/{
+
+                    console.log('Mumbai -', this.area);/*<< we have called the property which is
+                        belongs to this class*/
+                }
+                capital(country){
+                    return country+' '+'Delhi';
+                }
+            };
+
+            let myCity = new City;
+            myCity.capital('Capital of India');
+            // >> Mumbai - Bandra West
+            // >> 'Capital of India Delhi'
+        // console.log(typeof(myCity));
+
+        // ======================= example 2 ======================== 
+
+            // this. keyword uses in constructor() method in class
+
+        class Table{
+            monitor = 'Samasung ka monitor';
+            mouse = 'Flipkart ka mouse';
+            bottle = 'Aada bottle pani';
+            constructor(baki){
+                console.log( this.monitor,`aur`,this.bottle);/*<< used this. keyword to call the obj
+                    in constructor method */
+            }
+        }
+        let myTable = new Table;
+        console.log(myTable);
+        // Samasung ka monitor aur Aada bottle pani
+
+        // ======================= example 3 ======================== 
+
+        class excercise/*<< class name excercise*/{
+
+            workout; /*<<object name*/
+            
+            constructor(workout)/*constructor to use objects as parameters*/{
+
+                this.workout = workout;/*<< Instance Member*/
+                console.log(day1,day2);
+            }
+            /*Prototype Member will come here*/
+        }
+
+        let day1 = new excercise('Chest');
+        let day2 = new excercise('Lower Body');
+        console.log(day1,day2);
+
+
+        // ======================= example 4 ======================== 
+
+        class Instagram /*<< class name*/{
+            profile;
+            created;
+            post = 0;
+
+            constructor(profile, post = 0){
+                this.profile = profile;
+                this.created = Date.now();
+                this.post = post;   
+            }
+        }
+
+        const zahidAc = new instagram('Zahid Kazi', 10 );/*<< to send these arguments into objects */
+        console.log(zahidAc);
+
+        // ======================= example 5 ======================== 
+
+        class num{
+            a;
+            b;
+            c;
+            constructor(a,b,c){
+                this.a = a;
+                this.b = b;
+                this.c = c;
+            }
+        }
+
+        const myNum = new num(10,3,5);
+        let testNum = new num(4,7,8);
+        console.log(myNum,testNum);
+
+
+        // ======================= example 5 ======================== 
+
+        class Flight{
+            Mumbai;
+            Delhi;
+            Kolkata;
+            constructor(Mumbai, Delhi, Kolkata){
+                this.Mumbai = Mumbai;
+                this.Kolkata = Kolkata;
+                this.Delhi = Delhi;
+            }
+        }
+
+        let afternoon = new Flight(`12.30 PM`, `1.15PM`, `1.00 PM`);
+
+        let evening = new Flight(`4.45 PM`, `5.15 PM`, `6.00 PM`);
+
+        let night = new Flight(`9.00`,`9.30`,`11.00`);
+
+        console.log(afternoon, evening, night);
+
+    </script>
+</body>
+</html>

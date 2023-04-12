@@ -1,0 +1,201 @@
+<center>
+    <h1>
+        class Inheritance
+    </h1>
+</center>
+<hr/><br/>
+
+<h2>
+    <ol>
+        <li>
+            In Obeject Oriented Inheritance make easy and helps to create a new class as similar to the Parent and can share those
+            objects to child class we can add some new objects and values in child class to make it different.
+        </li>
+        <br/>
+        <li>
+            To Inherit Objects from Parent class to child class we use extends keyword after child class name.   
+        </li>
+        <br/>
+
+        <li>
+            If we are expecting 2 pramaters (_,_) in constructor then we have to declare 2 arguments
+            when we create a new Object variable otherwise it will Sytax Error.     
+        </li>
+        <br/>
+
+        <li>
+            super() method is mandatory to be written in Child class constructor to inherite the objets from Parent.<br/>
+            Same parent obejcts are required to call in constructor() parameter to be use by new Arguments.
+        </li>
+        <br/>
+        <li>
+            Below is the output for the example 1, where we created 1 class Template for 3 different brand in 2 category
+            which is Supplement Product Info and Juice Product Info, we Inherited Objects from Supplement Product to Juice Product.
+            <br/><br/>
+            <img src="./InheritancePrinted.PNG" alt="">
+        </li>
+    </ol>
+</h2>
+
+<hr/>
+<div id="output">
+    <h2 id="show">
+
+    </h2>
+</div>
+
+<script>
+    // ================================ example 1 =================================
+
+    class Supplement{
+        constructor(brand,type,weight,price){
+            this.supp_brand = brand;
+            this.supp_type = type;
+            this.supp_weight = weight;
+            this.supp_price = price;
+        }
+        
+        nutrition(){
+            return`\n ${this.supp_brand} ${this.supp_type} ${this.supp_weight} ${this.supp_price}`;
+        }
+    }
+
+    // we are Inheriting Objects from above class to below class
+    class Juice extends Supplement{
+        constructor(brand,type,weight,price,flavour){/*JS itself create a constructor but if we want to add extra functionality
+             then we have to create a constructor*/
+            super(brand,type,weight,price);/*to */
+            this.Juiceflvr = flavour;
+        }
+        JuiceInfo(){
+            return`${super.nutrition()} ${this.Juiceflvr}`;
+        }
+    }
+
+    let Supplement_1 = new Supplement('Brand - MuscleTech <br/>', 'Type - Whey Protien <br/>', 'Weight - 4lb <br/>', 'Price - 5800rs <br/><br/>');
+    
+    let Supplement_2 = new Supplement('Brand - ON <br/>', 'Type - Whey Protien <br/>', 'Weight - 4.2lb <br/>', 'Price - 5560rs <br/><br/>');
+    
+    let Juice_1 = new Juice('Brand - Tang <br/>', 'Type - Fruit Juice <br/>', 'Weight - 1000ml <br/>', 'Price - 860rs <br/>', 'Flavour - Mix Fruit');
+    
+    const showJuice = document.getElementById('show');
+    show.innerHTML = `Best Juice of 2023 : <br> ${Juice_1.JuiceInfo()}`;
+
+    // Supplement 1
+    let createNutri = document.createElement('h2');
+    createNutri.innerHTML = `Best Supplement of 2023 : <br/> ${Supplement_1.nutrition()}`;
+
+    const showNutri = document.getElementById('output');
+    showNutri.insertAdjacentElement('afterbegin',createNutri);
+
+    // Supplement 2
+    let Supp2 = document.createElement('h2');
+    Supp2.innerHTML = `Best Supplement of 2023 : <br/> ${Supplement_2.nutrition()}`;
+
+    let showSupp2 = document.getElementById('output');
+    showSupp2.insertAdjacentElement('afterbegin',Supp2);
+
+    console.log('',); /*We given the strings here in console for the specific Object*/
+
+    console.log('');
+    
+    console.log('Best Juice of 2023',Juice_1.JuiceInfo()); /*We given the strings here in console for the specific Object*/
+
+    // ============================ exmaple 2 ============================
+
+    class Car{
+        constructor(name, model, country, color){
+            this.carName = name;
+            this.Carmodel = model;
+            this.Carcountry = country;
+            this.Carcolor = color;
+        }
+        carInfo(){
+            return`${this.carName} ${this.Carmodel} ${this.Carcountry} ${this.Carcolor} `;
+        }
+    }
+
+    class Bike extends Car{
+        constructor(name, model, country, color,topSpeed){
+            super(name, model, country, color);
+            this.topSpeed = topSpeed;
+        }
+        bikeInfo(){
+            return`${super.carInfo()} ${this.topSpeed}`;
+        }
+    }
+
+    let car1 = new Car('\n\nName - Harier','\nYear - 2023','\nCountry - India','\nColor - Metallic Grey');
+    let bike1 = new Bike('\n\nName - Dominor','\nYear - 2023','\nCountry - India','Color - White','\nType - Sports/Cruisers');
+    
+    console.log('Award Winning Vehicle:-',car1.carInfo());
+
+    console.log('The No.1 Bike of India:-',bike1.bikeInfo());
+
+
+    class Suv extends Car{
+        constructor(name, model, country, color){
+            super(name, model, country, color);
+        }
+        suvInfo(){
+            return`${super.carInfo()}`;
+        }
+    }
+    let suv1 = new Suv('\n\nName - Gloster','\nYear - 2022','\nCountry - India','\nColor - Red');
+    console.log('The New MG Gloster:-', suv1.suvInfo());
+
+
+    // ============================ exmaple 2 ============================
+    
+    class Bank_Details{
+        constructor(name, Ac, Adr, type){
+            this.Ac_name = name;
+            this.Ac_num = Ac;
+            this.Ac_Adr = Adr;
+            this.Ac_type = type;
+        }
+
+        icici(){
+            return `${this.Ac_name} ${this.Ac_num} ${this.Ac_Adr} ${this.Ac_type}`;
+        }
+        
+    }
+
+    class Axis extends Bank_Details{
+        constructor(name, Ac, Adr, type, created){
+            super(name, Ac, Adr, type)
+            this.Ac_created = created;
+        }
+        axisInfo(){
+            return `${super.icici()} ${this.Ac_created}`;
+        }
+    } 
+    
+    let icici = new Bank_Details('Zahid', '242477','B 101, Asmita Ashwirwad','Savings');
+    console.log(icici);
+    let jsonData = JSON.stringify(icici) /*converting JS objetcs into Json objects*/
+    console.log(jsonData,'<< JS Obj converted fully into Json Obj'); /*JS converted fully in Json Obj*/
+    
+    let axis = new Bank_Details('Shifa','123456', '405, Sainagar, Vasai', 'Savings', 'Aug 2018');
+    console.log(axis);
+
+    let getAxis = ()=>{
+        let a = JSON.stringify(axis)
+        console.log(a)
+        let b =  [axis]
+        b.forEach((a)=>{
+            console.log(a);
+        })
+    }
+    getAxis();
+
+    // detailsAxis()
+    // let axisToJson = axis;
+    // console.log();
+
+    // let axisData = [axisToJson];
+
+    // });
+
+
+</script>

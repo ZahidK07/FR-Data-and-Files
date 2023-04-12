@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 style="background:rgb(6, 189, 6)">JS Motly used String Methods</h1>
+    </center>
+    <hr/><br/><br/>
+
+    <div>
+        <h2>
+            <ol>
+                <li>.length is property to check a length of String. </li><br>
+                <li>.toUpperCase() is a built in JS String function to make the strings in upper Case.</li><br>
+                <li>.toLowerCase() is also a built in JS function to lower case the strings.</li><br>
+                <li> In strings the Index will start from 0 check below example<br/><br/>
+                        <center><img src="./strLength.PNG" alt="stringLength"></center><br/>
+
+                        The length of letter is 6 -
+                        letter [l, e, t, t, e, r]<br/>
+                        it starts from 0 and it end at 5 [ 0,1,2,3,4,5] 
+                </li><br/>
+                <li> .slice() method is buitl in JS fucntion which takes arguments to Break the strings from one index position to another.
+                   <br/><br/>
+                    <ul>
+                        <li>
+                             slicing the strings by using parameters in string methods from index position to position<br/><br/>
+                             .slice(3,5) so here "Apple" output will be >> ple<br/><br/>
+                             .slice(3) so the output will be >> le 
+                        </li><br/>
+                        
+                    </ul>    
+                </li>
+                <li>.replace() also holds two parameters('AB',CD) so AB will replace by CD in this scenario.</li>
+                <br/>
+                <li>
+                    .reverse()
+                </li>
+            </ol>
+        </h2>
+    </div>
+
+
+    <script>
+    // >>>>>>>>>>>> String Methods <<<<<<<<<<<<<
+        let animal ='Tiger';
+        let ANIMAL = 'TIGER';
+            console.log(
+                '\n',animal.length,'<< used .length poperty()',
+                '\n',animal.toUpperCase(),'<< used .toUpperCase()',
+                '\n',animal.toLowerCase(),'<< used .toLowerCase()'
+            );
+
+            console.log(
+                '\n',ANIMAL.toLocaleLowerCase(),'<< used toLocaleLowerCase()',
+                '\n',ANIMAL.toLocaleUpperCase(),'<< used toLocaleUpperCase()'
+            );
+
+            console.log(
+                '\n',animal.slice(0,3),'<< used .slice(0,3) to break the Tiger',
+                '\n', animal.slice(3),'<< used .slice(3) to break the Tiger'
+            )
+        ;
+
+    // >>>>>>>>>>>> String Methods - replacing Strings <<<<<<<<<<<<< 
+
+    let myReplace = 'JavaScript';
+    console.log(myReplace.replace('JavaScript','HTML'))    
+    
+
+    let machine = 'HP';
+    console.log(machine)
+    console.log(machine.replace('HP','Lenovo'),'<< HP replaced by Lenovo');
+        
+    // >>>>>>>>>>>> String Methods - checked with multiple Strings Methods <<<<<<<<<<<<<     
+    let quizStr = 'AllFine';
+
+    for(i=0;i<quizStr.length;i++){
+        console.log('Pos',i+'',quizStr[i],quizStr.slice(3), quizStr.toUpperCase(), quizStr.toLowerCase(),quizStr.length);
+    }
+    console.log('\n',quizStr,'\n required String Methods applied above,\n It has been checked by for Loops as well\n it has been Concat with + ');
+    
+    // >>>>>>>>>>>> String Methods - reverse Strings <<<<<<<<<<<<< 
+
+    // let x = 'Saturn';
+    // let y = x.reverse();
+    // console.log(y)
+
+
+    // let revStr = prompt()
+    // let a = revStr.length;
+    // for(let i = a-1; i>=0; i--){
+    //     console.log(revStr[i]);
+    // }
+    //the Aove code is the tradional way to reverse the Strings || Elements    
+    
+     console.clear()   
+    let revFunc=(...arr)=>{
+        let rev = arr;
+        console.log(
+            `\n${rev.reverse()} << this has been reversed\n`,
+            `\n${rev.length} << Lentgh of Array is 3`,
+        );
+    }
+    revFunc(['ABC','123','abc'],[1,2,3],[50])
+
+    let testArr = 'bottle,bag,charger';
+    console.log(testArr);
+
+    console.log(testArr.split(""));
+
+    console.log(testArr.split('').length)
+
+    console.log(testArr.split())
+
+    let rv = testArr.split(',');//<< string split and stored as Array
+    console.log(rv.reverse(),'<< Array reversed ');
+
+
+    
+    </script>
+</body>
+</html>

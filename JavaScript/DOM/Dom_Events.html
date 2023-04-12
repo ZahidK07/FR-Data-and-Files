@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+</head>
+<body>
+    <center>
+        <ul>
+            <h1>DOM Events</h1>
+        </ul>
+    </center>
+    <hr/>
+    <br/>
+
+    <h2>
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </h2>
+    <br/>
+    <hr/>
+
+    <div class="main">
+        <h2 id="heading2">Learning DOM Events</h2>
+        <p id="ptag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, hic placeat?
+           Fugiat quasi error excepturi voluptatem blanditiis itaque molestiae.
+        </p>
+        <button>Click here</button>
+        <button id="getBtn">Get here</button>
+    </div>
+
+    <script>
+
+        let mybtn = document.querySelector('button');
+        let myheading = document.querySelector('#heading2');
+        let p = document.querySelector('#ptag');
+
+        mybtn.addEventListener('click', ()=>{
+            myheading.style.color = 'red'
+            p.style.visibility = 'hidden'
+            
+            console.log('Paragraph removed');
+        });
+
+        // Adding paragraph 
+        let getbtn = document.getElementById('getBtn');
+
+        getbtn.addEventListener('click', ()=>{
+            myheading.style.color = 'green'
+            p.style.visibility = 'visible';
+            p.style.color = 'green'
+        });
+    </script>
+</body>
+</html>

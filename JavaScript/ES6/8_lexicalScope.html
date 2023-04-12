@@ -1,0 +1,54 @@
+
+<center><h1>Lexical Scope</h1></center>
+<hr/>
+<br/>
+
+<h2>
+    <ol>
+        <li>
+            Lexical scope is scope from one range to another within a code block.
+        </li>
+        <br/>
+        <li>
+            this. keyword help to choose the object from the Local scope of the code block or a function.
+            Or we can say is a child function getting obect from the Parent by using this. is a lexical scope.
+        </li>
+        <br/>
+        <li>
+            A function resolves the issue of a lexical scope
+        </li>
+    </ol>
+</h2>
+
+
+<script>
+    // ======================= example 1 ========================
+     let book = {
+        author: 'Abc',
+        name: 'Best',
+        subject: 'science',
+        checkBook(){
+            console.log(this.author); /*We used this. to select the Obj from parent scope*/
+        }
+     }
+    book.checkBook();
+
+    // ======================= example 1 ======================== 
+
+    let TV ={
+        brand: 'Sansui',
+        name: 'Abc',
+        OS: 'Android',
+        feature: ['Google', 'OTT'],
+        
+        newTV(){
+            this.feature.map((a)=>{ /* we have added a new arrow function with a parameter to create a new scope 
+                                       so that we can print it from it.*/
+                console.log(this.name, a);
+            })
+        }
+    }
+
+    TV.newTV();
+
+</script>

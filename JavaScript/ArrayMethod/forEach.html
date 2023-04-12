@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="" hreg="">
+    <title>
+        forEach
+    </title>
+</head>
+<body>
+    <center>
+        <u><h1>forEach Method</h1></u>
+    </center>
+    <br/>
+    <hr/>
+
+    <h2>
+        <ol>
+            <li>
+                forEach() is introduced in ES6 to iterate over Arrays and loop over it. 
+            </li><br/>
+            <li>
+                here is the Syntax array.forEach( callback, thisObject ) <br/><br/>
+                <ol type="i">
+                    <li><u>callback:</u> This allow the function to test the each and every element in the array.</li>
+                    <li><u>thisObject:</u> This will be called when the callback function is executed.</li>
+                </ol>
+            </li><br/>
+            <li>
+                We can also Iterate over API Array of Objects witht he help this method
+            </li><br/>
+            <li>
+                The forEach() method contains a call back function and it must take 
+                atleast on parameter which represents the elements of an array.
+            </li>
+        </ol>
+    </h2>
+
+    <div id="box">
+
+    </div>
+
+    <script>
+
+        // example 1 
+        const numAr = [10, 4, 7];
+
+        numAr.forEach((ArrayValues, indexPosition)=>{ // to Loop over Arrays with Index Number
+            console.log(indexPosition, ArrayValues) // Printing the Array values with its Index numbers
+        });
+
+        /* below is the output
+         0 10
+         1 4
+         2 7
+        */
+
+        // example 2
+
+        let dummyUrl = 'http://localhost:1200/Ecommerce';
+
+        let shop = async()=>{
+            let checkUrl = await fetch(dummyUrl);
+            let res = await checkUrl.json();
+            let data = await res;
+            console.log(data);
+            data.forEach((Arr)=>{
+                console.log(Arr)
+            });
+        }
+        shop()
+
+        // exmaple 3
+
+        const testArr = [2, 4, 5, 10];
+
+        testArr.forEach((arr)=>{
+            console.log(arr*2);
+            let newEl = document.createElement('h1')
+            newEl.innerHTML = `${arr*2}`
+
+            let getDiv = document.getElementById('box')
+            getDiv.appendChild(newEl)
+            
+        });
+        /*
+            In the above scenario we have Loop over and multiplied the Array values by 2
+            and displayed on html page with DOM methods.
+        */
+
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<center><h1>DOM Methods</h1></center>
+<hr/>
+<h2>
+    <ol>
+        <li class="list">DOM is known as Document Object Model and to Target HTML through JS.</li>
+        <br/>
+        <li>
+            HTML Elements called as Node in DOM and we can manipulate and make changes in it with DOM.
+        </li>
+        <br/>
+
+        <li class="list">To find HTML with DOM Methods are document.getElementByTagName, ById, ByClassName.</li>
+        <br/>
+
+        <li class="list">getElementsByTagName('li') It will give all the li Tags HTML Collection.</li>
+        <br/>
+
+        <li>getElementsByClassName('list'); it will give all the Element Collections of class 'list'.</li>
+        <br/>
+
+        <li> querySelector is like a CSS selector class Element can be select by .class and Id by #Id.</li>
+        <br/>
+
+        <li> querySelectorAll('h2'); gives the Node List of Elements selected.</li>
+    </ol>
+</h2>
+<br/><br/>
+
+<div>
+    <hr/>
+    <h1 id="hding1">
+        Learning DOM
+    </h1>
+    <h2 class="hding2">
+        DOM Methods
+    </h2>
+    <hr/>
+</div>
+
+<script>
+
+    let a = document.getElementById('hding1').innerHTML = 'DOM for Web Developement';
+    document.getElementById('hding1').style.color='blue';
+    /*Changed the ELement By Id to blue color and innerHTMl*/
+
+    let b = document.getElementsByTagName('li');
+    console.log(b);
+    /*Printed all li Tags*/
+
+    let c = document.getElementsByClassName('list');
+    
+    console.log(c);
+    /*Printed all class list elements*/
+
+    let d = document.querySelector('.list');
+    let mySelector = document.querySelector('#hding1');
+    console.log(d, mySelector);
+    /*Printed both the element of Id and class*/
+
+    let allSelect = document.querySelectorAll('h2');
+    console.log(allSelect);
+</script>

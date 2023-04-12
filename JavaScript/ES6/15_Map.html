@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Filter</title>
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } */
+
+
+    </style>
+</head>
+<body>
+    <center>
+        <ul>
+            <h1>ES6 Map</h1>
+        </ul>
+    </center>
+    <hr/>
+
+    <h2>
+        <ol>
+            <li>Map method() is introduced in ES6.</li>
+            <br/>
+
+            <li>Its way to Iterate over Data specially on Arrays and and its Objects.</li>
+            <br/>
+
+            <li>Map method use to apply logic for Add, Sub, Mul, Divide, or iterate over HTML, 
+                it always return the same length of output as input array.
+            </li>
+            <br/>
+
+            <li>
+                Below are some example to pickup the Data from DB files or any other Obj.
+                <br/>
+                <br/>
+
+                <p> <center>An example of a Data stored in Array of Objects</center>
+                    <br/>
+                    <center><img src="./ObjExample.PNG" alt=""> </center>
+                </p>
+
+                <ol type ="i">
+                    <li>
+                        <p>console.log(fnds); Printed the below output from the fnds Obj file,
+                            it returns us the two Array of obejcts.</p>
+                        <img src="./MapOutput1.PNG" alt="">
+                    </li>
+                    <br/><br/>
+
+                    <li>
+                        <p>
+                            console.log(fnds[1]); is a syntax which gives the Array on 1st Index of 'fnds' data' Object.
+                        </p>
+                        
+                        <img src="./MapOutput2.PNG" alt="">
+                    </li>
+                    <br/><br/>
+
+                    <li>
+                        <p>
+                            console.log(fnds[1].name); We can Target any value from the Obj by selecting the Index[] postion of the 
+                            Element and .dot to choose it.
+                        </p>
+
+                        <img src="./MapOutput3.PNG" alt="">
+                    </li>
+                    <br/><br/>
+
+                    <li>
+                        <p>
+                            console.log(fnds[1].name, fnds[1].age); We can also take Multile values from Array of Object by
+                            selecting the Index[] position and choose value .dot for multiple objects.
+                        </p>
+
+                        <img src="./MapOutput4.PNG" alt="">
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </h2>
+    <hr/>
+
+    <div id="container">
+        <div id="parent">
+
+        </div>
+    </div>
+
+    <script>
+        // example 1 
+        // let testArr = ['Zahid','Jan',7, 94];
+        // testArr.map((getArr)=>{return getArr});
+        // console.log(testArr);
+
+        // example 2
+
+        let fnds = [
+            {
+                name: 'jack',
+                age : '22',
+            },
+            {
+                name: 'sharjil',
+                age: '26',
+            },
+        ];
+        
+        // mapping out Array of objects from above data
+        fnds.map((callFnd)=> /*storing it in a parameter(_) of an arrow function*/
+            {return callFnd} /*returning it that parameter to print*/ 
+        );
+
+        console.log(fnds);  /*printing the output*/ 
+        console.log(fnds[1]); /* getting Data from index[1] */
+        console.log(fnds[1].name); /*getting whatever the value on index[1] proprety*/
+        console.log(fnds[1].name, fnds[1].age); /**/
+            
+    </script>
+</body>
+</html>

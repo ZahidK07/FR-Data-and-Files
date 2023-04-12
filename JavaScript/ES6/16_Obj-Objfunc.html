@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects with Functions</title>
+</head>
+<body>
+    <center>
+        <ul>
+            <h1>
+                Objetcs and Objects with functions
+            </h1>
+        </ul>
+    </center>
+    <hr/>
+    <br/>
+
+    <h2>
+        <ol>
+            <li>
+                Object is non primitive type of Data and its mainly a way to represent the Data.
+            </li>
+            <br/>
+            <li>
+                Json file uses the Objects format to show the Data with Array of Objects.
+            </li>
+            <br/>
+            <li>
+                Obects are use to create a blue print of its properties to re-use it with new Obj 
+            </li>
+            <br/>
+            <li>
+                ES5 Constructor function() helps to create Objects with Parameters and Arguments parsed 
+                in new Variable and we can re-use it every time to show new objects with same protperties
+                .this key check if the key matches with parameter or not to and then excecute it.
+            </li>
+        </ol>
+    </h2>
+
+    <script>
+        // example 1
+
+        function Athlete(name, age, streak, wins, loss){
+            this.Player_Name = name;
+            this.Player_Age = age;
+            this.Player_Streak = streak;
+            this.Player_Wins = wins;
+            this.Player_Loss = loss;
+        }
+
+        var athlete1 = new Athlete('Khabib',34, 30, 30, 0);
+        console.log(athlete1);
+
+        var athlete2 = new Athlete('Islam', 27, 4, 5, 1);
+        athlete2.country ='Russia'; /*<< To add property and value in Object*/
+        console.log(athlete2);
+        /*
+        Athlete {Player_Name: 'Khabib', Player_Age: 34, Player_Streak: 30, 
+                Player_Wins: 30, Player_Loss: 0}
+
+        Athlete {Player_Name: 'Islam', Player_Age: 27, Player_Streak: 4, 
+                Player_Wins: 5, Player_Loss: 1}        
+        */
+
+        // example 2 
+
+        function Ecommerce(Appliances, Electronics, Fashion, Books){
+            this.Appliances = Appliances;
+            this.Electronics = Electronics;
+            this.Fashion = Fashion;
+            this.Books = Books;
+        }
+
+        var amazon = new Ecommerce('Fridge, Washing Machine, Grinder', 'Laptop, Mobiles', 'Clothing, Shoes', 'Mystery, Sci-fi, Kids');
+        console.log(amazon);
+
+        var flipkart = new Ecommerce('AC, Washing Machine, Fridge', 'Laptop, PC, Mobiles','Clothing, Shoes','History, Travel, Foods');
+        console.log(flipkart);
+        
+    </script>
+</body>
+</html>

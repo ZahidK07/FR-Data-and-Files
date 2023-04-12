@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <center>
+        <ul>
+            <h1>ES6 Spread Operator</h1>
+        </ul>
+    </center>
+    <hr/>
+    <br/>
+
+    <h2>
+        <ol>
+            <li>...spread Operator also starts with three dots to iterate over Arrays. </li><br/>
+            <li>it will return the Array Data with all together and it can be store in new variable
+                to add and merge with another Array Data to make it one Array.
+                <br/><br/>
+
+                let fruitArr = ['Apple', 'Banana','Chicku'];<br/>
+                let dryfruitArr = ['Almonds','Kaju','Dates'];<br/>
+                let stockArr = [...fruitArr, ...dryfruitArr];<br/>
+                console.log(stockArr);<br/>
+                >>['Apple', 'Banana', 'Chicku', 'Almonds', 'Kaju', 'Dates']
+            </li><br/>
+            <li>
+
+            </li><br/>
+            <li>
+
+            </li><br/>
+        </ol>
+    </h2>
+
+    <script>
+        // example 1
+        let fruitArr = ['Apple', 'Banana','Chicku'];
+        let dryfruitArr = ['Almonds','Kaju','Dates'];
+        let stockArr = [...fruitArr, ...dryfruitArr];
+        console.log(stockArr);
+
+        // exmaple 2 which mostly used in ReactJS to replace Object keys values
+        let fruitobj = {
+            name: 'Apple',
+            price: '150rs KG',
+            type: 'indian',
+        };
+        console.log({name: 'Banana',...fruitobj });/*<< These type of argument declaration will not replace the Object*/
+        console.log({...fruitobj,name: 'Banana'});/*<< If the Spread Operator will be first then 
+            it can be replace the object key value in the Output*/
+
+            
+    </script>
+</body>
+</html>

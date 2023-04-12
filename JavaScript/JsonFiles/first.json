@@ -1,0 +1,29 @@
+
+{
+  "Ecommerce":[
+        {
+            "id": 1,
+            "category":"Appliances",
+            "product": "Fridge",
+            "price": 18500
+        },
+        {
+            "id": 2,
+            "category":"Clothing",
+            "product": "Pant",
+            "price": 1000
+        },
+        {
+            "id": 3,
+            "category":"Food",
+            "product": "Oats",
+            "price": 200
+        },
+        {
+            "id": 4,
+            "category":"Electronics",
+            "product": "Mobile",
+            "price": 22000
+        }
+    ]
+}

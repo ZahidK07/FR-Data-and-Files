@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    <center>
+        <u>
+            <h1>
+                Async Await
+            </h1>
+        </u>
+    </center>
+
+    <h2>
+        <ol>
+            <li>
+                Async Await is the new way to Asychronous programming which introduced in ES2017, it aslo a readable code to perform network request.
+            </li><br/>
+            <li>
+                Its also Help to GET Data from API/Server with a promise as an await to full fill it with help of .fetch().
+            </li><br/>
+            <li>
+                Its mandatory to use async keyword with function name like async function() or myFunc = async()=>{}
+                and await will use in an async function to to replace .then() method of promise.
+            </li><br/>
+            <li>
+                Call back hell was solved and can handle easily by Async Await.
+            </li>
+        </ol>
+    </h2>
+    <br/><br/>
+    <input type="button" onclick="testAPI()">
+    <div id="myDiv">
+
+    </div>
+
+    
+    <script>
+    // let found = async(myData)=>{
+    //     res = await myData;
+    //     return res;
+    //     newres = await newdata;
+    //     return ;
+    // } 
+    // found('Ok');
+
+    let kitchen = {
+        dal: '1kg',
+        Rice: '2.5kg',
+        Oil: '5kg',
+        Salt: '5kg',
+        masala : [
+            haldi = '1Jar',
+            Red_Spice ='1Jar',
+            Dhaniya = '2Jar'
+        ]
+    };
+
+    // getting data from above objects
+    async function test(){
+        let myData = await kitchen;
+        return myData;
+        alert('ok')
+        
+    }
+    test().then(console.log(kitchen.masala[2]))
+
+
+    // const newAsync = async()=>{
+    //     let greet = await 'Hello';
+    //     return greet;
+    //     console.log(greet);
+    //     let say = await `${greet} World `;
+    //     console.log(say)
+    // }
+    // newAsync().then()
+
+    // 'http://localhost:1200/Ecommerce'
+
+    const testAPI = async()=>{
+        const recJson = await fetch('http://localhost:1200/Ecommerce');
+        const showJson = await recJson.json();
+        document.getElementById('myDiv').innerHTML = `
+        <p>Category : <u> <b>${showJson[0].category}</b> </u></p>
+        <p>Product : <u> <b>${showJson[0].product}</b> </u></p>`
+    }
+    
+    </script>
+    
+</body>
+</html>

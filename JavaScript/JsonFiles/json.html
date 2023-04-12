@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Practice</title>
+    <link rel="stylesheet" href="./json.css">
+    <script src="./json.js"></script>
+</head>
+<body>
+     <center>
+            <h1>
+                <ul class="text">Json Data</ul>
+            </h1>
+     </center>   
+     <hr/>
+     <h2>
+        <ol>
+            <li class="text"> A Json Data always starts with a key like below example and then an Array of Objects.
+                JSON Array of Objects: A JSON object is same as JavaScript object. We can also create a JSON Array 
+                containing many JSON objects in it, then we can iterate over that array or use the [ ] to get the object we need. 
+                In the example below.
+                
+                <br/><br/>
+                there are four JSON objects in the array assigned to key Ecommerce. Included object “id” and “category” etc.
+                <br/><br/>
+                    <img src="./JsonArrOfOjects.PNG" alt="Json Array of Objects">
+                <br/><br/>
+            </li>
+            <br/>
+            <li class="text">
+                We can also use the Json data and make it live to test and create Dummy API's on local Server
+                with command propmt, to run the Server use <em>npx json-server --watch file.json --port 1234</em>.
+                But dont use 8080 because its a default server port.
+            </li><br/>
+            <li class="text">
+
+            </li>
+        </ol>
+     </h2>
+     <hr/>
+
+     <div>
+        <button onclick="changeTheme('black')"> Eye Saver</button>
+        <button onclick="changeTheme('white')"> Light Mode</button>
+        <!-- <button onclick="showJson()">Click</button> -->
+     </div>
+
+     <main>
+        <div class="container">
+            <!-- <div class="card">
+                <div class="info">
+                    <div id="img-div">
+                        <img src="" alt="">
+                    </div>
+                    <div id="product-info">
+                        <h3>
+                            <p id="prod-cat">category</p>
+                            <p id="prod-name">product</p>
+                        </h3>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+     </main>
+     
+
+     <script>
+        // window.onload = success();
+
+
+     </script>
+</body>
+</html>

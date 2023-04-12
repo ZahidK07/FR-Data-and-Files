@@ -1,0 +1,69 @@
+<center><h1>DOM Traverse</h1></center>
+<hr/>
+
+<h2>
+    <ol>
+        <li id="1st-li">In Dom Traverse we can also select our Parent Element of HTML 
+            by using .parentNode property in the variable selected.
+        </li>
+        <br/>
+
+        <li class="child">Children Node can be called by Selecting its Parent Element with .childNodes,
+            it should be in document.querySelectorAll() method.
+        </li>
+        <br/>
+
+        <li>
+            Next Element Sibling - .nextElementSibling will print us the Element of an HTML like li id='1' and the next 
+            Element is li id='2' so we will get li with id 2, also it will prin the Element an they 
+            have to be in same Parent Element.
+        </li>
+        <br/>
+
+        <li>
+            .previousElementSibling Print the previous Element from same Parent Tag of an HTML with
+            .querySelector() method .               
+        </li>
+    </ol>
+</h2>
+
+<div>
+    <ul id="Ul">
+        <li id="Li">
+            Car
+        </li>
+        <li>
+            Bike
+        </li>
+        <h3 id="h3">
+            Plane
+        </h3>
+        <h3 id="h3-2">
+            Steamer
+        </h3>
+    </ul>
+</div>
+
+
+<script>
+
+    let a = document.getElementById('Li');
+    let Parent = a.parentNode;
+    console.log(Parent);
+    /*Parent Element of li tag is printed which is ul*/
+
+    let b = document.querySelector('#Ul');
+    console.log(b.childNodes);
+
+
+    let c = document.getElementById('Li');
+    console.log(c.nextElementSibling);
+    /*We called next Sibling Element of li tag which id is 'Li' with Car text,
+      so output printed is >> 'Bike'
+    */
+
+    let d = document.querySelector('#h3-2');
+    console.log(d.previousElementSibling);
+    /* To Print the previous Element of Sibling from same Parent use .previousElementSibling */
+
+</script>

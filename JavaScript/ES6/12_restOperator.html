@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .main{
+        min-height: 500px;
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-block{
+        width: auto;
+        display: flex;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    div{
+        height: 200px;
+        width: 200px;
+        border: 2px solid blue;
+        background: yellow;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    ul{
+        list-style: none;
+    }
+</style>
+<body>
+    <center>
+        <ul>
+            <h1>ES6 Rest Operator</h1>
+        </ul>
+    </center>
+    <hr/>
+
+    <h2>
+        <ol>
+            <li>rest Operator allows us easily to handle various input as parameters in a function.</li>
+            <br/>
+            <li>Its syntax allows a function to treat indefinite number of arguments as an array.</li>
+            <br/>
+            <li>...rest Operator will be last in Parameter () and it will print as an Array.</li>
+            <br/>
+            <li>We can pass many values in Arguments and it will recevied by ...Rest in Parameter() and merge it    
+                with other values and create a new function every time for re use.
+            </li>
+            <br/>
+            <li></li>
+            <br/>
+        </ol>
+    </h2>
+    <hr/>
+    <br/>
+
+    <center>
+        <h1>Showing Data with ES6 rest Operator dynamically </h1>
+    </center>
+    <br/><br/>
+    <main class="main">
+
+        <section class="card-block">
+
+            <div id="card1">
+                
+            </div>
+        
+            <div id="card2">
+
+            </div>
+
+            <div id="card3">
+
+            </div>
+
+        </section>
+
+    </main>
+    
+
+    <script>
+
+        // ES5 example 1
+        function mysum(num1, num2){
+            console.log(num1+num2);
+        }
+        mysum(1,2,3,5,10);
+        // << Output is 3
+        /*So in the above example of ES5 we aprsed 2 parameters but we have more values to add
+          and if we parse recieved that with more arguments it will make the code messy and long,
+          The solution for this is rest operator in ES6.
+        */
+         
+        /*========================= example 2 with DOM ========================== */
+        let restSum = (...num2)=>{/*<< Resr OPerator within Arrow func*/
+            let el = document.createElement('h2');/*Creating h3 tag to show output*/
+            el.innerHTML = num2; 
+
+            let card = document.getElementById('card1');/*calling parent tag to add child tag in it*/
+            card.appendChild(el);/*<< adding the child tag into the last of the parent*/
+        }
+        restSum(2,5,10,10);
+
+        /*========================== example 3 with DOM ========================= */
+        let photos = (num,...box)=>{
+            let el2 = document.createElement('li');
+            el2.innerHTML = num+box;
+
+            let brk = document.createElement('ul');
+            brk.appendChild(el2);
+
+            let card2 = document.querySelector('#card2');/*called Parent Tag*/
+            card2.insertAdjacentElement('afterbegin',brk);/*adding ul and then li into begining of Parent tag*/
+        }
+        photos(25,'img1','img2','img3','img4','img5');
+
+        /*========================== example 4 with DOM ========================= */
+
+        let myBag =(ob1,...obj2)=>{
+            let list = document.createElement('li');
+            list.innerHTML = ob1+obj2;
+
+            let Ul = document.createElement('ul');
+            Ul.appendChild(list);
+
+            let card3 = document.querySelector('#card3');
+            card3.insertAdjacentElement('afterbegin',Ul);
+        }
+        myBag('Bag: ','Tiffin, Bottle, Charger, Attar\n', 'Wallet');
+
+        /*========================== example 5 with DOM ========================= */
+
+        let cupboard =(accessories,Laptop, ...clothes )=>{
+            let a = document.createElement('h3');
+            a.innerHTML = accessories+Laptop+clothes;
+
+            let b = document.createElement('div');
+            b.appendChild(a);
+
+            let c = document.querySelector('.card-block');
+            c.insertAdjacentElement('afterBegin',b);
+        }
+        cupboard('Accessories : Attar, Wallet, Diary<br/>', 
+            'Laptop : Dell, HP<br/>', 'Clothes : Jeans, Shirt, Kurta, T-shirt');
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>
+            Array.reversed()
+        </title>
+    </head>
+    <body>
+        <center>
+            <u>
+                <h1>
+                    Array.reversed()
+                </h1>
+            </u>
+        </center>
+        <hr/><br/>
+
+        <h2>
+            <ol>
+                <li>
+
+                </li><br>
+                <li>
+
+                </li><br/>
+                <li>
+                    
+                </li><br/>
+            </ol>
+        </h2>
+        <br/>
+
+        <div id="Arrays">
+
+        </div>
+
+        <script>
+            // example 1 
+
+            let arr1 = [12, 4, 5, 2].reverse() /*Arrays reversed with .reverse() method*/
+            console.log(arr1.toString()); // reversed Arrays converted to Strings
+
+            arr1.forEach((check)=>{ /* reversed Arrays for each done with .forEach()*/
+                console.log(check.toString()); /*reversed forEach Arrays converted to Strings*/
+            });
+            
+            
+            // example 2 
+
+            let strArr = ['Apple','Amazon','Meta','Microsft','Netflix'];
+            strArr.reverse();
+            console.log(strArr);
+            /*
+            >> ['Netflix', 'Microsft', 'Meta', 'Amazon', 'Apple']
+            */
+        </script>
+    </body>
+</html>

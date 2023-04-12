@@ -1,0 +1,32 @@
+{
+    "BankDetails":[
+        {
+            "id": 1,
+            "Bank-Name": "ICICI",
+            "name":"Zahid",
+            "Ac-number": "121255507",
+            "type": "Savings"
+        },
+        {
+            "id": 2,
+            "Bank-Name": "Axis",
+            "name":"Shifa",
+            "Ac-number": "199577",
+            "type": "Savings"
+        },
+        {
+            "id": 3,
+            "Bank-Name": "BOI",
+            "name":"Sharjeel",
+            "Ac-number": "1231995",
+            "type": "Salary"
+        },
+        {
+            "id": 4,
+            "Bank-Name": "Kotak",
+            "name":"Noorjaha",
+            "Ac-number": "44508247",
+            "type": "Savings"
+        }
+    ]
+}

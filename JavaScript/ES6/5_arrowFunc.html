@@ -1,0 +1,158 @@
+
+
+<center><h1>ES 6 Arrow Functions</h1></center><hr>
+
+<h2>
+    <ol>
+        <li>functions holds parameteres to get the new values everytime we call the same func to reuse it.</li><br>
+        <li>Arrow functions are simple and holds the concept of this keyword.</li><br>
+        <li>It uses its Parents this from Window because arrow function doesn't have its own this.</li><br>
+        <li>If we required new output to print we have to use new Arguments whithin a function(Argument,Argument) when called</li><br>
+        <li>ES6 functions will create with const or let like a variable for example: 
+            let myFunc = ()=>{ code block to Print};</li><br>
+        <li>arrow functions Parameters can also be used with Template Literals and even the func() 
+            can be called in a Template Litral.
+        </li>    
+    </ol>
+</h2>
+
+<script>
+    // ========================== example 1  ES5 func and ES6 arrow func =============================
+
+        function es5(a,b){
+            return a+" " + " "+b;
+        }
+        es5('tradional function', 'also known as ES5 function');
+
+
+        let es6 = (a,b,c)=>{`${a} ${b} ${c}`}; /* A simple example*/
+        e6('arrow function', 'known as ES6 function', 'in JS');
+    //
+
+    // ========================== example 2 ES6 funciton =============================
+
+        let brand = name => console.log(`${name} i5 Processor`); 
+        brand('Dell Latitude');
+        brand('HP Notebook');
+        // >> Dell Latitude i5 Processor
+        // >> HP Notebook i5 Processor
+
+        /* Single line arrow function with Template literal and name argument in it */
+
+    // ========================== example 3 =============================
+
+    /*let shoes = brand, price => console.log(brand, price);
+    shoes('Puma', '2800 Rs');
+    
+    if we're declaring the fucntion with multiple arguments then paranthesis(_,_) is required
+    and only for one argument it can be without paranthesis 
+    */
+
+
+    // ========================== example 4 =============================
+        
+    
+        let Info = (country, lang) => country + lang; 
+        Info('India -',' Hindi is the National language')
+        Info('Saudi-',' Arabic is the National language')
+        // JS will check only one above Info() func which is the last one for Saudi so the below is the output
+        // >> 'Saudi- Arabic is the National language'
+
+        console.log(Info('India -',' Hindi is the National language'));
+        console.log(Info('Saudi-',' Arabic is the National language'));
+        
+        /* But if we need to reuse the code with new Data, then we need to call that func under console.log()
+         to get the latest output for new user Data below output is the example from above code.
+        */
+        // >> India - Hindi is the National language
+        // >> Saudi- Arabic is the National language
+    
+    /* An example of single line function with Arrow */    
+
+    // ========================== example 5 =============================
+
+     let food = (price, discount) => 
+     `Cost ${price} Incl of all taxes` + 
+     `${discount} valid till Jan 31st`;
+     console.log(food(150, ' & Discount is 20%'));
+     console.log(food(240, ' & Discount is 18%' ));
+     // >> Cost 150 Incl of all taxes & Discount is 20% valid till Jan 31st
+     // >> Cost 240 Incl of all taxes & Discount is 18% valid till Jan 31st   
+    
+     /* Above food() function based on arrow function and holds two parameteres of price and discount
+        and we called those in Template Literals to concatenate with strings and console.log() we are 
+        sending new values everytime to get new output.
+    */
+
+    // ========================== example 6 =============================
+
+        const car = () =>{
+
+            let carType = prompt();
+            if(carType == 'Range Rover'||'Hummer'){
+                console.log('An SUV Type ') ;
+            } 
+            else if(carType == 'Cadillac'||'BMW'){
+                console.log('a Sedan Type');
+            }
+            else if(carType == 'Galardo'|| 'Ford GT'){
+                console.log('An Exotic Type');
+            }
+            else{
+                alert('Sorry! not listed');
+            }
+        };
+        car();
+    
+    /*In the above code we are trying to Print the type of car from Data Base which provided by User*/    
+    
+
+    // ========================== example 7 =============================
+
+        let func7 = Singleparameter => `${Singleparameter} with multiple Template Literal`;
+            console.log(`${func7('Its a 1 parameter in func and argument is called')} in this Arrow func`);
+        
+            /* >> Its a 1 parameter in func and argument is called with multiple
+              Template Literal in this Arrow func.
+        */
+
+
+        let newFunc7 = (first_Parameter, second_Parameter) => 
+            `${first_Parameter} 1st Template Literal. ${second_Parameter} 2nd Template Literal.`;
+                console.log(`1st Argument recieved by ${newFunc7('first_Parameter and concatenate with',
+                    '2nd Argument received by second_Parameter and concatenate with')}`);        
+        
+        /* >> 1st Argument recieved by first_Parameter and concatenate with 1st Template Literal
+              2nd Argument received by second_Parameter and concatenate with 2nd Template Literal
+
+        The above func have two Parameters and both concatenate in Template Literals as well as the func()
+        to add more strings to print the output      
+        */
+    // ========================== example 8 =============================
+
+        const func8 = (parameter1, parameter2)=>{
+            console.log('this is a multi parameter func', 'with multiple arguments in console.log');
+        };
+        func8();
+    // >> this is a multi parameter func with multiple arguments in console.log
+        
+    // ========================== example 9 =============================
+        let func9 = (param1, parameter2)=>{
+            console.log(`${param1} ${parameter2} concatenate with Template Literals.`);
+        };
+        func9('multi parameter (param1, parameter2)', '& func9(multi arguments)');
+        /* >> multi parameter (param1, parameter2) & func9(multi arguments) 
+              concatenate with Template Literals.
+        */
+
+        // ========================== example 10 =============================
+
+        let func10 = (param1, param2, param3)=>{
+            return `${param1} ${param2} ${param3} 
+                is required to learn React.JS for Amazing Front End Works`;
+        };
+        func10('HTML','CSS','JavaScript');
+
+    // >> 'HTML CSS JavaScript is required to learn React.JS for Amazing Front End Works'
+
+</script>

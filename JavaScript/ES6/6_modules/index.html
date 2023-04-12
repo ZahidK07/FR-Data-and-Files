@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Export Import Modules ES6</h1>
+<hr/>
+<h2>
+    <ol>
+        <li>Import and Export introduced in JS ES6 to manage the code from multiple files 
+            which divided and to recieve in main file</li><br>
+        <li>We can create Modules in JS and this concept used in ReactJs </li><br>
+        <li>What we can Export
+            <ul>
+                <li>A variable </li>
+                <li>An object literal</li>
+                <li>A Class</li>
+                <li>A function</li>
+                <li>A ++</li>
+            </ul>
+        </li><br>
+        <li>To export a code from a file to main file we need to use export before a variable.<br>
+            <ul>
+                <li>export let myData = 'Data';</li>
+            </ul>
+            <br>
+
+            Export a function(); from file.js <br>
+            <ul>
+                <li>let myFunc = ()=>{}</li>
+            </ul>
+            <br>
+
+            Importing a func() in main.js
+            <ul>
+                <li>import {myFunc};</li>
+                print directly myFunc(); in the main file to get the output
+            </ul>
+        </li>
+        <br/>
+        <li>If we're importing 2 variables from same file we can do <br/>import {myVar, newVar} 
+            from 'file.js';
+        </li>
+    </ol>
+</h2>
+
+<p></p>
+
+<script type="module" src="./app.js" ></script>
+
+</body>
+</html>
+

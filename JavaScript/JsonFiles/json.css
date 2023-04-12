@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 80%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    border: 1px solid red;
+    max-height: 200px;
+    min-width: 250px;
+}
+
+#img-div{
+    background: blue;
+    min-height: 150px;
+}
+
+#product-info{
+    /* display: flex;  
+    justify-content: space-between; */
+}
+
+#prod-cat{
+    float:left;
+    width: 50%;
+    text-align: center;
+}
+
+#prod-name{
+    float:left;
+    width: 50%;
+    text-align: center;
+}

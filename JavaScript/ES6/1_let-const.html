@@ -1,0 +1,151 @@
+<h1><center>ES6 Ecma Script:</center><hr><br>ES6 is known as Ecma Script which is Standardised by European Computer Association (ECMA) Script.</h1>
+
+<h2>Provide Standard to JavaScript for different Browsers.<br><br>
+     Also used with Node.js & React.js .<br><br> 
+     This is not a Framework or Library .<br><br>
+     ES6 was released in 2015 also called as ES2015.
+
+</h2>
+
+<hr><br>
+<h2><center style="text-decoration: underline;">Variables var, let and Const</center>
+    <ol>
+        <li>let and const do not allow hoisting in ES6</li>
+        <li></li>
+    </ol>
+
+</h2>
+
+
+
+<script>
+
+// // ============================================= example 1 ==================================================
+
+    let a = 20; /*<< this variable is out of block so output will return 20*/
+     
+    if(true){
+        let a = 20; /*<< this variable is under a block and seperate so output will return 20*/
+        console.log(a)
+    };
+
+    console.log(a)
+
+
+ // ============================================= example 2 ==================================================    
+
+    let b = 50; /* This is a global scope so it will return the global scope value >> 50 global scope */
+    if(true){
+        let b = 50; /* This is a block scope so it will return the block scope value >> 50 block scope */
+        console.log(b + " block scope");
+    };
+    console.log(b + " global scope");
+    // if both the let will be same block or outside of it then it will give Error that "it has been already defined"
+
+
+    let newvar = 50; /*declared the global scope variable with let so it cannot redeclared with same name globally*/
+    if(true){
+        var myvar = 50; /*declared the variable globally with let so it cannot redeclared with same name even under a block*/
+        console.log(myvar+ " block scope");
+    };
+    console.log(myvar + " global scope");
+    // This code will get >> Uncaught SyntaxError: Identifier 'myvar' has already been declared
+    
+
+
+    // ============================================= example 3 ==================================================
+            // Hoisting of variables
+
+            var ab;
+            console.log(ab);
+            // the output will be >> unefined 
+
+            
+            console.log(ac);
+            var ac;
+            // the output will be >> unefined 
+
+            // console.warn(num);
+            // let num = 1
+            // >> Uncaught ReferenceError: Cannot access 'num' before initialization
+            
+            for( var i = 0; i<10; i++){
+            setTimeout(()=>{ // <<Time out func to Run the code after sometime
+                console.log(i)
+                },3000) //<< this code will run after 2 secs
+            }
+
+            /* The above code will take print 10 and after a 1 sec break it will print value of 10, 10 times in a row 
+                this has been done with var key word because its value was set as 10 due to its a global scope
+            */
+            console.clear()
+            for( let i = 0; i<10; i++){
+            setTimeout(()=>{
+                console.log(i)
+                },3000) //<< this code will Run after 3 secs
+            }
+            /* with let it will print 10 after a 1 sec it will print 1 to 9 because JS will check everytimes till 10 because its a block scope 
+                where JS entred the block every single time and created new i 
+            */
+           
+
+    // ============================================= example 4 ==================================================    
+
+            const brandName = "Dell";
+            const genType = "5th";
+             
+            function getName(){
+                console.log(brandName);
+                var genType = "5th";
+                console.log(genType);
+            };
+            getName();
+            // console.log(brandName);
+    
+    // ============================================= example 5 ==================================================
+
+        const Tech = [
+            {
+                browser:'Chrome, Safari, Edge, Mozilla, Brave',
+                OS:'Android, iOS, MS, Unix, FireFox OS',
+                Device:'iPhone, Samsung, Linux Machine, Sony Mobile'
+            }
+        ]    
+        
+        let getTech=()=>{
+            Tech.map((data)=>{
+                console.log('\n',data.browser,'\n',data.Device,'\n',data.OS)
+                document.write(data.innerHTML =`
+                    <hr/>
+                    <center>
+                            <div>
+                            <ul style='list-style: none;'>
+                                <li> Types Of Browsers - ${data.browser}</li><br/>
+                                <li> Types Of OS ${data.OS}</li><br/>
+                                <li> Types Of Device ${data.Device}</li>
+                            </ul>
+                        </div>
+                    </center>
+                `)
+            })
+        }
+        getTech()
+    
+    // ============================================= example 5 ==================================================
+
+    console.clear()    
+    let num1 = 'num1 10';
+    let num2 = 'num2 20';
+    [num1,num2]=[num2,num1]
+    console.log(num1)
+    console.log(num2)
+    // variables values swapped by destructuring
+    
+
+    let machine1 = 'Computer';
+    let machine2 = 'generator';
+    [machine1,machine2] = [machine2,machine1]
+    console.log(machine1+' << this was variable 2 but swapped to 1');
+    console.log(machine2+' << this was variable 1 but swapped to 2');
+
+</script>

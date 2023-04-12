@@ -1,0 +1,82 @@
+
+
+<center><h1>find() & findIndex()</h1></center><hr>
+
+<h2>                
+    <ol>
+        <li>find and findIndex both are methods () with parameter functions.</li><br>
+        <li>The use these methods are use to find out values, Data from Arrays and objects according to condition.</li><br>
+        <li>The findIndex() method returns -1 if no match is found.</li><br>
+    </ol>
+</h2>
+
+<script>
+    // ========================== example 1 =============================
+
+    // let newRigs = ["HP240, HP491, HP642, Nabors1211"];
+    let num = [4, 5, 10, 11, 20, 22, 26]
+    let checkRigs = num.find(function(item){
+        return item > 11;
+    })
+    console.log(checkRigs);
+
+    // >> 4
+    /* .find() method returned the lowest value from the number which we asked to check, in above
+        in above array the lowest data provided is 4.
+
+    */ 
+
+    // ========================== example 2 =============================
+
+        let arr = [4, 5, 10, 11, 20, 22, 26];
+        let checkArr = arr.find(function(item){
+            return item > 11;
+        })
+        console.log(checkArr);
+        // >> 20
+
+    /*But if we are checking the greater value > so it will be bigger then compared one for example
+    the above output is 20 which is bigger after 11 in same array.*/
+
+    // ========================== example 3 =============================
+
+        let val = [1,2,3,4,5,6,7,8];
+        let getVal = val.findIndex(function(values){
+            return values < 4;
+        })
+        console.log(getVal);
+        // >> 0
+    /* findIndex() returned the lowest values index position which is no. 1 and Index is 0th position 
+    
+    */
+    
+    // ========================== example 4 =============================
+
+        let newVal = [1,2,3,4,5,6,7,8];
+        let getnewVal = newVal.findIndex(function(values){
+            return values > 5;
+        })
+        console.log(getnewVal);
+        // >> 5
+    /* findIndex() also returns the index position of a value which will be greater > then 
+       the computed one from same array.
+    */   
+   
+    // ========================== example 5 =============================
+
+        let obj = [
+            {id: 10},
+            {id: 2},
+            {id: 32},
+            {id: 9},
+            {id: 24},
+           ]
+        let printObj = obj.findIndex(function(a){
+            return a.id > 2;
+        })
+        console.log(printObj);
+        // >> 0
+    /* findIndex() get the index position of id:10 which greater then id:2 in value. 
+    
+    */
+</script>

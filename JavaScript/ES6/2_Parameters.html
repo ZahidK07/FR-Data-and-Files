@@ -1,0 +1,78 @@
+
+<center><h1>Parameters</h1></center><hr>
+<h2>
+    <ol>
+        <li>The values comes under function(value,value) paranthesis is called as Parameters</li>
+        <li>Parameters(_,_) are used in functions to add things dynamically.</li>
+        <li>If we parsed two (_,_) arguments and printing only one value so it return NAN not a number.</li>
+        <li>functions can also be used within Parameters(_,func()) for reusability.</li>
+    </ol>
+</h2>
+
+<script>
+
+    // ================================= example 1 =====================================
+
+    function myFunc(a,b)/*<< parameteres*/{
+        return 10+10;
+    }
+    console.log(myFunc());
+    // >> 20
+    /*
+    A simple way to define parameter to print a value by returning the targeted numbers
+    
+    */
+
+
+    // ================================= example 2 =====================================
+
+    function myFunc(a,b)/*<< parameteres*/{
+        return a+b;
+    }
+    console.log(myFunc(10,5));/*<< Arguments*/
+    console.log(myFunc(22,8));/*<< Arguments*/
+    // >> 15
+    // >> 30
+
+    /* Dynamicaly used the variables in parameters to log different calculations 
+        while passing it from console.log(_,_) everytime.
+    */
+
+    // ================================= example 3 =====================================
+
+    function newFunc(a,b){
+        return a+b;
+    };
+
+    console.log(newFunc(25));
+    // >> NAN
+
+    /* If we parsed two (_,_) arguments and logginh only one value so it return NAN not a number
+        because we are doing addition for two values but logged only one number
+    */
+
+    // ================================= example 4 =====================================
+
+
+    function testfunc(){
+        return 23;
+    }
+
+    function calfunc(a,b, c = testfunc()){
+        return a+b+c;
+    }
+    console.log(calfunc(1,2,testfunc()));
+    // >>26
+
+    /* We can add a func() as a paremeter like above and it can be use for multipurpose arguments
+       to recall the code to reuse it  
+    */
+
+   // ================================= example 5 ===================================== 
+        
+    function main(a,b = main(a,b)){
+        return a+b;
+    }
+    console.log(main(1,2));
+
+</script>

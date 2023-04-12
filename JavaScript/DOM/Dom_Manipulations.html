@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <center>
+        <u>
+            <h1>DOM Manipulation</h1>
+        </u>
+    </center>
+    <hr/>
+    <br/>
+
+    <h2>
+        <ol>
+            <li> .innerHTML is an HTML property in DOM to change the the text of an Element.</li>
+            <br/>
+            <li> .style.color = '' or .style.background is used to set Element CSS, we can chane the style 
+                 by calling the CSS .style attribute and give the CSS property to change color, background, font etc.
+            </li>
+            <br/>
+            <li> .classList.add() use to add a new class to an Element.</li>
+            <br/>
+            <li> .classList.remove() use to remove a class from an Element.</li>
+        </ol>
+    </h2>
+    <hr/>
+    <br/>
+
+    <div>
+        <h2 id="profession">I am a Developer</h2>
+        <h2 id="css">Css used on this Element</h2>
+    </div>
+
+    <script>
+
+        let a = document.getElementById('profession');
+        profession.innerHTML = 'I am a Front-End Developer';
+        /*To change inner Text of an Element use innerHTML*/
+
+        let b = document.querySelector('css');
+        css.style.color = 'green';
+        css.style.background = 'black'
+        /* Example to Use CSS in with DOM Manipulation use .style.color = ''*/
+
+        let c = document.getElementById('profession');
+        profession.classList.add('designation');
+        /* class designation added to h2 tag*/
+
+        let d = document.querySelectorAll('profession');
+        profession.classList.remove('designation');
+        /*  designation class is removed from the Element */
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            toString() method
+        </title>
+    </head>
+    <body>
+        <center>
+            <u>
+                <h1>
+                
+                </h1>
+            </u>
+        </center>
+
+        <h2>
+            <ol>
+                <li>
+                    JS toString() is introduced in ES1 1997 to convert values in Strings.
+                </li><br/>
+                <li>
+                    .toString() method converts numbers in string adn values type will cahnge to string.
+                </li><br/>
+                <li>
+                    It can also gives us the Binary, Octa and Hecadecimal of that number by decalring it
+                    in the .toString(Binary) as parameter.
+                </li><br/>
+            </ol>
+        </h2>
+        <br/>
+
+        <div id="strDiv">
+            <h2>below is the output :-</h2>
+        </div>
+
+        <script>
+
+            // example 1
+            let num = 45;
+            let a = num.toString() // Int converted to String
+            console.log(a); // value recevied as a string
+            console.log(typeof(a)); // confirmed the value type 
+
+            // confirming the Data type with statements
+            if(typeof(a) === 'string'){
+                console.log('Hurray its a string');
+            } else(console.log('No its not'));
+
+            // checking the length of the converted string
+            for(i=0; i < a.length; i++){
+                console.log(i)
+            }
+
+            let b = document.createElement('h1');
+            b.innerHTML = `<em>length is </em><u>${i}<u/> `;
+            let x = document.getElementById('strDiv');
+            x.insertAdjacentElement('afterend',b);
+            
+            // example 2 
+                 
+                
+        </script>
+
+    </body>
+</html>
