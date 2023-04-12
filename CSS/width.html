@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width</title>
+    <style>
+        #parent{
+            border: 1px solid greenyellow;
+            width: min(100%, 600px);
+            margin-inline: auto;
+        }
+
+        #child{
+            width: min(100% - 2rem, 600px);
+            margin-inline: auto;
+            color: rgb(47, 11, 18);
+            background: yellow;
+            text-align: center;
+        }
+
+        #img{
+            width: min(100% - 1rem, 300px);
+            margin-inline: auto;
+            
+        }
+
+        #img img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child">
+                <h1>Width testing</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat impedit numquam ut iste quibusdam, 
+                   magni aspernatur voluptatum ratione inventore?</p>
+
+                   <p>We have used below width property to make reponsive Card</p>
+                <h3>
+                    width: min(100% - 2rem, 600px);<br>
+                    margin-inline: auto;
+                </h3>
+                <div id="img">
+                    <img src="./Images/unnamed.png" alt="">
+                </div>    
+                
+                  
+        </div>
+    </div>
+</body>
+</html>
